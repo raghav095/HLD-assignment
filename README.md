@@ -120,10 +120,10 @@ npm run verify
 ## 🧪 Simulation & Interactive Walkthrough
 Open the app in the browser ([http://localhost:5173](http://localhost:5173)):
 1. **Caching Demo**: Type `iph` in the search box. Look at the **Real-Time System Log**. The first keystroke reports a `Cache Miss` (fetching from database). Subsequent keystrokes for `iph` report `Cache Hit` with latency dropping to sub-milliseconds.
-2. **Consistent Hashing Demo**: Type `iph` then `jav`. Look at the **Consistent Hash Ring** panel. The interactive dial maps each prefix to different target nodes (e.g. `cache-node-0` vs `cache-node-1`) based on their SHA-256 coordinates.
+2. **Consistent Hashing Demo**: Type `iph` then `jav`. Look at the **Logical Cache Partitions** table. The active node row dynamically highlights to show which cache node owns the query prefix based on their SHA-256 coordinates.
 3. **Trending Recency Demo**:
    - Toggle Suggestion Mode to **Enhanced (Recency)**.
    - Search for a rare query (e.g., `react hook generator`) 3 times in a row.
    - Type `rea` in the search box. You will notice that `react hook generator` has immediately jumped to the top of suggestions, ahead of historically popular queries, because of the time-decay recency bonus!
    - Stop searching for it. After 2-3 minutes, query suggestions for `rea` will automatically revert to baseline popularity as the recency bonus decays.
-4. **Batch Writing Demo**: Click **Generate Traffic (Count: 25)** on the configuration card. Watch the **In-flight Buffer** count increase instantly in the metrics grid while the **DB Writes** count remains stable. After 5 seconds, the background timer will trigger, executing 1 single database transaction, clearing the buffer, and registering as only 1 increment on DB Transactions.
+4. **Batch Writing Demo**: Click **Generate Traffic** on the configuration card. Watch the **Buffer** count increase instantly in the Write reduction metrics card while the **DB Operations** count remains stable. After 5 seconds, the background timer will trigger, executing 1 single database transaction, clearing the buffer, and registering as only 1 increment on DB Transactions.
