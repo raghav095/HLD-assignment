@@ -2,8 +2,8 @@
 
 **Student Name:** Raghav Rathi  
 **SST Email:** raghav.24bcs10033@sst.scaler.com  
-**Github Repository:** (Add your public repository link here)  
-**Final Commit Hash:** `11647f7c256166e630ca702d8ff10e0d234c42ae`
+**Github Repository:** [https://github.com/raghav095/HLD-assignment](https://github.com/raghav095/HLD-assignment)  
+**Final Commit Hash:** (As submitted in the Google Form)
 
 ---
 
